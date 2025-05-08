@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from "react";
 
-function App() {
+
+// class Counter extends React.Component {
+
+//   constructor(props){
+//     super(props)
+
+//     this.state = {count : 5}
+//   }
+
+
+//   render(){
+//     return (
+//       <div>
+//         <button> - </button>
+//         <span> {this.state.count} </span>
+//         <button> + </button>
+//       </div>
+//     )
+//   }
+// }
+
+// export default Counter
+
+import React, { useState } from 'react'
+
+const App = () => {
+
+  const [count,setCount] = useState(0)
+  const date = new Date()
+  date.setDate(date.getDate() + count)
+
+
+  const handleDecrement = ()=>{
+    setCount(count - 1)
+  }
+
+  const handleIncrement = ()=>{
+    setCount(count + 1)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+      <button onClick={handleDecrement}> - </button>
+        <span> {date.toDateString()} [{count} ]</span>
+        <button onClick={handleIncrement}> + </button>
     </div>
-  );
+   
+  )
 }
 
-export default App;
+export default App
