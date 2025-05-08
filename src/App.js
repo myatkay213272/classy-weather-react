@@ -1,53 +1,13 @@
-// import React from "react";
-
-
-// class Counter extends React.Component {
-
-//   constructor(props){
-//     super(props)
-
-//     this.state = {count : 5}
-//   }
-
-
-//   render(){
-//     return (
-//       <div>
-//         <button> - </button>
-//         <span> {this.state.count} </span>
-//         <button> + </button>
-//       </div>
-//     )
-//   }
-// }
-
-// export default Counter
-
-import React, { useState } from 'react'
+import React from 'react'
+import Header from './components/Header'
+// import Counter from './components/Counter'
 
 const App = () => {
-
-  const [count,setCount] = useState(0)
-  const date = new Date()
-  date.setDate(date.getDate() + count)
-
-
-  const handleDecrement = ()=>{
-    setCount(count - 1)
-  }
-
-  const handleIncrement = ()=>{
-    setCount(count + 1)
-  }
-
   return (
-
-    <div>
-      <button onClick={handleDecrement}> - </button>
-        <span> {date.toDateString()} [{count} ]</span>
-        <button onClick={handleIncrement}> + </button>
+    <div className='weather-container'>
+        <Header/>
+        {/* <Counter/> */}
     </div>
-   
   )
 }
 

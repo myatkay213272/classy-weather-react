@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(to top right, #3a7bd5, #00d2ff);
+  background: linear-gradient(to top right, #aed53a, #00fbff);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -17,7 +17,7 @@ body {
 
 /* Weather container */
 .weather-container {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(168, 17, 243, 0.15);
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   padding: 2rem 3rem;
@@ -63,6 +63,7 @@ body {
   font-size: 1rem;
   outline: none;
   margin-bottom: 1.5rem;
+  margin-top: 30px;
 }
 
 /* Responsive tweaks */
@@ -78,4 +79,36 @@ body {
   .location {
     font-size: 1.5rem;
   }
+}
+
+
+button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+.weather-info {
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  /* margin: 0 auto; */
+  color: rgb(69, 83, 34);
+}
+
+.weather-info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
 }
