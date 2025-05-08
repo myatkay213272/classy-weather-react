@@ -33,6 +33,7 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .weather-button:hover {
